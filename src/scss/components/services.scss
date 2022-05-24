@@ -1,0 +1,21 @@
+@use '../util' as *;
+
+.services {
+
+  &__paving {
+    margin-top: rem(30);
+  }
+  
+
+
+
+  &__list {
+    margin-top: rem(30);
+
+    li {
+      list-style: circle;
+      line-height: 2.5;;
+    }
+  }
+  
+}

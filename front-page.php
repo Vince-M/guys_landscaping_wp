@@ -17,15 +17,23 @@
 
   <main class="main container row frontpg__main">
 
+    <!-- REALITY
+    =================================================== -->
     <section class="frontpg__section frontpg__section--top">
       <div class="frontpg__section frontpg__img--left">
-        <img src="<?php the_field( 'reality_image' ); ?>" alt="Image of front garden">
+        
+      <?php 
+        $image = get_field('reality_image');
+        if( !empty( $image ) ): ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+      <?php endif; ?>
+
       </div>
       <div class="frontpg__section frontpg__text frontpg__text--top">
         <h2><?php the_field( 'reality_header' ); ?></h2>
         <p><?php the_field( 'reality_text' ); ?></p>
 
-        <div class="btn__learn-more">
+        <div class="btn btn__learn-more">
           <a href="<?php echo site_url( 'about' ); ?>"><?php the_field( 'reality_btn' ); ?></a>
         </div>
       </div>
@@ -33,15 +41,23 @@
 
     <hr class="section-break">
 
+    <!-- SERVICES
+    =================================================== -->
     <section class="frontpg__section frontpg_section--right">
       <div class="frontpg__section">
-        <img src="<?php echo get_theme_file_uri('/img/index-customLandscape_650x500-min.jpg') ?>" alt="Image of front garden">
+       
+      <?php 
+        $image = get_field('services_image');
+        if( !empty( $image ) ): ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+      <?php endif; ?>
+
       </div>
       <div class="frontpg__section frontpg__text">
         <h2><?php the_field( 'services_header' ); ?></h2>
         <p><?php the_field( 'services_text' ); ?></p>
 
-        <div class="btn__learn-more">
+        <div class="btn btn__learn-more">
           <a href="<?php echo site_url( 'services' ); ?>"><?php the_field( 'services_btn' ); ?></a>
         </div>
       </div>
@@ -49,15 +65,24 @@
 
     <hr class="section-break">
 
+    <!-- PROJECTS
+    =================================================== -->
     <section class="frontpg__section">
       <div class="frontpg__section frontpg__img--left">
-        <img src="<?php echo get_theme_file_uri('/dist/img/index-featureProjects_650x500-min.jpg') ?>" alt="Image of front garden">
+
+      <?php 
+        $imageProjects = get_field('projects_image');
+          if( !empty( $imageProjects ) ): ?>
+            <img src="<?php echo esc_url($imageProjects['url']); ?>" alt="<?php echo esc_attr($imageProjects['alt']); ?>" />
+        <?php endif; ?>
+          
+          
       </div>
       <div class="frontpg__section frontpg__text">
         <h2>Featured Projects.</h2>
         <p>View some of our recent featured projects and read what our clients have to say.</p>
 
-        <div class="btn__learn-more">
+        <div class="btn btn__learn-more">
           <a href="#">View our projects</a>
         </div>
       </div>

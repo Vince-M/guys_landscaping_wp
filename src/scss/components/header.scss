@@ -9,6 +9,7 @@
   }
 
   .hamburger {
+    z-index: 999;
 
     @include breakpoint-up (large) {
       visibility: hidden;
@@ -125,11 +126,17 @@
 //   }
 // }
 
+// .current_page_item > a {
+//   color: red;
+// }
+
+
+
 .nav {
   height: auto;
   position: relative;
 
-  &__link {
+  &__link a {
     color: var(--darkgreen);
     text-transform: uppercase;
     text-decoration: none;
@@ -141,9 +148,11 @@
       margin-top: rem(20);
     }
 
+  
+
     &:hover,
     &:active {
-      color: var(--blue);
+      color: var(--olive);
     }
 
     @include breakpoint-down(small) {
@@ -186,7 +195,7 @@
     margin: 0;
     justify-content: flex-end;
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     width: 100%;
     height: auto;
     text-align: center;
@@ -220,4 +229,13 @@
     }
   }
 }
+
+.current_page_item > a {
+  color: var(--gold);
+}
+
+.btn_contact > a:active {
+  color: var(--darkgold);
+}
+
 

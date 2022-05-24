@@ -34,6 +34,11 @@ body {
   }
 }
 
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .row {
   padding: 0 rem(10);
 }
@@ -63,14 +68,20 @@ img {
   max-width: 100%;
 }
 
-a,
+a {
+  color: var(--darkgreen);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 a:visited,
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 // BUTTONS 
 .btn {
+  margin-top: rem(30);
 
   &__contact a {
     padding: rem(8) rem(20);
@@ -91,6 +102,11 @@ a:hover {
       color: var(--darkgreen);
       transition: color 350ms ease-in-out;
     }
+
+    &:visited,
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &__hero {
@@ -108,7 +124,7 @@ a:hover {
       cursor: pointer;
 
       &:hover {
-        background-color: var(--lightgreen);
+        background-color: var(--darkgreen);
         border: rem(1) solid var(--lightgreen);
         color: var(--white);
         transition: color 250ms ease-in-out;
@@ -133,6 +149,38 @@ a:hover {
       color: var(--white);
       transition: color 350ms ease-in-out;
     }
+  }
+
+  &__estimate {
+    border: 0.0625rem solid var(--darkgreen); // 1px
+    padding: 0.625rem 1.25rem; // 10px 20px
+    display: inline-block;
+
+    @include breakpoint-down(small) {
+      padding: 0.625rem 1rem;
+      margin: 0 auto;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--darkgreen);
+  
+      a {
+        color: var(--white);
+      }
+    }
+  
+    a {
+      color: var(--dark-green);
+  
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--white);
+      }
+    }
+
   }
 
 }
@@ -269,6 +317,10 @@ a:hover {
 .facebook {
   color: var(--darkgreen);
 
+  a {
+    color: var(--darkgreen);
+  }
+
   &:hover {
     text-decoration: underline;
   }
@@ -282,6 +334,7 @@ a:hover {
   position: relative;
   display: flex;
   flex-direction: row;
+  margin-top: rem(40);
 
   &__wrapper {
     display: flex;
@@ -304,6 +357,7 @@ a:hover {
 
     @include breakpoint-down(small) {
       flex-direction: column;
+      text-align: center;
     }
 
     &--right {
@@ -316,6 +370,10 @@ a:hover {
     &--contact {
       display: flex;
       flex-direction: column;
+
+      @include breakpoint-down(small) {
+        text-align: center;
+      }
 
       .address {
         margin-bottom: rem(20);

@@ -8,17 +8,32 @@ h5 {
   font-family: var(--font-heading);
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: rem(20);
+}
+
+h1 {
+  color: var(--darkgreen);
+  font-size: rem(56);
+  margin-top: rem(35);
+
+  @include breakpoint-down(small) {
+    font-size: rem(42);
+  }
 }
 
 h2 {
   color: var(--darkgreen);
   font-size: rem(48);
+  margin-top: rem(36);
 }
 
 h3 {
   color: var(--darkgreen);
   font-size: rem(40);
+  margin-top: rem(20);
+
+  @include breakpoint-down(small) {
+    font-size: rem(30);
+  }
 }
 
 h5 {
@@ -30,10 +45,16 @@ p {
   font-family: var(--font-body);
   font-size: rem(16);
   line-height: 1.5;
-  margin-bottom: rem(30);
+  margin-top: rem(30);
 }
 
 strong {
   font-weight: 700;
-  color: var(--darkblue);
+  color: var(--darkgreen);
+}
+
+.intro {
+  font-family: var(--font-body);
+  font-size: rem(18);
+  line-height: 1.5;
 }

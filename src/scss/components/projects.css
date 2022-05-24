@@ -1,0 +1,6 @@
+.projects__col--4 {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}

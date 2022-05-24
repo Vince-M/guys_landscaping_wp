@@ -1,6 +1,16 @@
 @use '../util' as *;
 
 .about {
-  width: 80%;
-  margin: rem(60) auto 0;
+  
+
+  &__image {
+    margin-top: rem(30);
+
+    // @include breakpoint-down(small) {
+    //   margin-top: rem(30);
+    // }
+    
+  }
+
+
 }
