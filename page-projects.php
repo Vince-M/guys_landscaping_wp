@@ -36,21 +36,17 @@ $projects = get_field('gallery');
 
             <?php endif; ?>
 
-            <div class="projects">
+            <div class="projects projects__col projects__col--4">
 
-            <div class="projects__col projects__col--4">
-            <?php if($projects): ?>
+                <?php if($projects): ?>
 
-<?php foreach( $projects as $project): ?>
+                  <?php foreach( $projects as $project): ?>
 
-  <img src="<?php echo $project['sizes']['thumbnail']; ?>">
+                    <img src="<?php echo $project['sizes']['thumbnail']; ?>">
 
-<?php endforeach; ?>
+                  <?php endforeach; ?>
 
-<?php endif; ?>
-            </div>
-
-             
+                <?php endif; ?>
 
             </div> <!-- projects projects__col projects__col--4 -->
 
